@@ -35,6 +35,11 @@ class ExpoWebdavServerModule : Module() {
       ))
     }
 
+    AsyncFunction("webdav") {rootDir: String ->
+      System.loadLibrary("rust_lib")
+      webdav(rootDir)// stuck here
+    }
+
     // Enables the module to be used as a native view. Definition components that are accepted as part of
     // the view definition: Prop, Events.
     View(ExpoWebdavServerView::class) {
@@ -44,4 +49,6 @@ class ExpoWebdavServerModule : Module() {
       }
     }
   }
+
+  external fun webdav(dir: String): String
 }

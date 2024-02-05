@@ -13,7 +13,8 @@
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "open:ios": "open -a \"Xcode\" example/ios",
-    "open:android": "open -a \"Android Studio\" example/android"
+    "open:android": "open -a \"Android Studio\" example/android",
+    "release": "release-it"
   },
   "keywords": [
     "react-native",
@@ -38,5 +39,26 @@
     "expo": "*",
     "react": "*",
     "react-native": "*"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}",
+      "requireCleanWorkingDir": false,
+      "addFiles": [
+        "package.json"
+      ]
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
   }
 }
