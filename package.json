@@ -29,11 +29,12 @@
   "author": "Xuanping <a845326948@gmail.com> (https://github.com/lxp-git)",
   "license": "MIT",
   "homepage": "https://github.com/flickering-AI/expo-webdav-server#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/react": "^18.0.25",
     "expo-module-scripts": "^3.4.0",
-    "expo-modules-core": "^1.11.8"
+    "expo-modules-core": "^1.11.8",
+    "release-it": "^17.0.3"
   },
   "peerDependencies": {
     "expo": "*",
