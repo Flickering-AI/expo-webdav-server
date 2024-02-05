@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-webdav-server": ["../src/index"],
+      "expo-webdav-server/*": ["../src/*"]
+    }
+  }
+}
