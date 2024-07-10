@@ -1,7 +1,7 @@
 {
   "name": "expo-webdav-server",
   "version": "0.2.0",
-  "description": "Start a webdav server on Android",
+  "description": "Start a webdav server on React Native app",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
-    "open:ios": "open -a \"Xcode\" example/ios",
+    "open:ios": "xed example/ios",
     "open:android": "open -a \"Android Studio\" example/android",
     "release": "release-it"
   },
@@ -29,11 +29,12 @@
   "author": "Xuanping <a845326948@gmail.com> (https://github.com/lxp-git)",
   "license": "MIT",
   "homepage": "https://github.com/flickering-AI/expo-webdav-server#readme",
+  "dependencies": {},
   "devDependencies": {
-    "@release-it/conventional-changelog": "^8.0.1",
     "@types/react": "^18.0.25",
-    "expo-module-scripts": "^3.4.0",
-    "expo-modules-core": "^1.11.8",
+    "expo-module-scripts": "^3.5.2",
+    "expo-modules-core": "^1.12.17",
+    "@release-it/conventional-changelog": "^8.0.1",
     "release-it": "^17.0.3"
   },
   "peerDependencies": {

@@ -32,6 +32,12 @@ public class ExpoWebdavServerModule: Module {
       ])
     }
 
+    AsyncFunction("webdav") {(path: String, promise: Promise) in
+      let server = GCDWebDAVServer(uploadDirectory: path)
+      server.start(withPort: 8080, bonjourName: "")
+      promise.resolve(true)
+    }.runOnQueue(.main)
+
     // Enables the module to be used as a native view. Definition components that are accepted as part of the
     // view definition: Prop, Events.
     View(ExpoWebdavServerView.self) {
